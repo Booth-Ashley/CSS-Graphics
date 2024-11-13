@@ -1,0 +1,140 @@
+body {
+    background-color: #87CEEB;
+    overflow: hidden;
+  }
+  
+  .train-container {
+    position: absolute;
+  }
+  
+  .train {
+    position: relative;
+    height: 120px;
+    margin-bottom: 35px;
+    display: flex;
+    animation: moveTrain 15s linear infinite;
+  }
+  
+  .train-body {
+    position: relative;
+    background-color: #1f3c68;
+    width: 350px;
+    height: 60px;
+    border-radius: 20px 20px 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+  
+  .train-front {
+    position: absolute;
+    left: 0;
+    width: 90px;
+    height: 60px;
+    background-color: #1b3a55;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .train-nose {
+    background-color: #f2a900;
+    width: 40px;
+    height: 20px;
+    border-radius: 0 15px 15px 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .train-windows {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    left: 50px;
+    top: 12px;
+  }
+  
+  .window {
+    width: 18px;
+    height: 18px;
+    background-color: #a3c2da;
+    border-radius: 3px;
+    border: 1px solid black;
+  }
+  
+  .train-door {
+    position: absolute;
+    width: 22px;
+    height: 50px;
+    background-color: #444;
+    left: 173px;
+    top: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    z-index: 10;
+  }
+  
+  .headlight {
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 42px;
+    z-index: 15;
+  }
+  
+  .left-headlight {
+    left: 2px;
+    border: 1px solid greenyellow;
+  }
+  
+  .right-headlight {
+    right: 2px;
+    border: 1px solid red;
+  }
+  
+  /* Extra Carriage */
+  .extra-carriage {
+    background-color: #2a4a80;
+    width: 350px;
+    height: 60px;
+    border-radius: 20px 20px 5px 5px;
+    position: relative;
+    display: block;
+  }
+  
+  /* Train Wheels */
+  .train-wheels,
+  .extra-carriage-wheels {
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .wheel {
+    width: 20px;
+    height: 20px;
+    background-color: #222;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid red;
+  }
+  
+  @keyframes moveTrain {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-1100px);
+    }
+  }
